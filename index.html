@@ -15,16 +15,21 @@
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="pink_button">Pink</button>
         <div id="color_box" class="gray"></div>        
         <script>
             const gray_button = document.getElementById("gray_button");
             const blue_button = document.getElementById("blue_button");
+            const pink_button = document.getElementById("pink_button");
             const color_box = document.getElementById("color_box");
             gray_button.onclick = function() {
                 color_box.className = "gray";
             };
             blue_button.onclick = function () {
                 color_box.className = "blue";
+            }
+            pink_button.onclick = function () {
+                color_box.className = "pink";
             }
             /* TODO 1
              *
@@ -39,9 +44,10 @@
         <button id="counter_button">This fabulous button</button>
         has been clicked <span id="countspan">0</span> times.
         <script>
-            var count=0;
             const counter_button = document.getElementById("counter_button");
             const countspan = document.getElementById("countspan");
+
+            var count=0;
             counter_button.onclick = function() {
                 /* TODO 2
                  *
@@ -50,6 +56,8 @@
                  * then updates the text content of "countspan"
                  * to show the current value of "count".
                  */
+                 count++;
+                 countspan.textContent = count;
             }
         </script>
 
@@ -66,6 +74,14 @@
                  * alert dialog stating whether the count
                  * (from part 2, above) is even or odd.
                  */
+                if (count % 2 === 1) 
+                {
+                    alert('This fabulous number is odd.');
+                }
+                else 
+                {
+                    alert('This fabulous number is even.');
+                }
             }
         </script>
     </body>
